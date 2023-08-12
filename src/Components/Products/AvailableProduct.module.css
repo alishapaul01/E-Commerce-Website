@@ -1,0 +1,37 @@
+h2 {
+    text-align: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.section {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+}
+
+.product {
+   margin: 25px 100px 50px 100px;
+} 
+
+
+.main-image img {
+  object-fit: cover
+}
+
+.list{
+  list-style-type: none;
+  margin:0;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.text{
+  text-align: center;
+}
