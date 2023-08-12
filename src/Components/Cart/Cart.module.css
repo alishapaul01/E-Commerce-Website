@@ -1,0 +1,86 @@
+.card {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-height: 20rem;
+    overflow: auto;
+    justify-content: space-around;
+  }
+  
+.title{
+  color:black;
+  font-weight: bold;
+  width: 20px;
+}
+.price{
+  color:black;
+  font-weight: bold;
+  width: 20px;
+}
+.quantity{
+  color:black;
+  font-weight: bold;
+  width: 20px;
+}
+.content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  border-bottom: 1px solid rgb(73, 184, 235);
+  margin:5px;
+}
+
+.headings{
+  display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin: 1rem 2rem;
+    border-bottom: 1px solid black;
+  }
+
+  .total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: 1rem 2rem;
+    
+  }
+
+  .actions {
+    text-align: center;
+  }
+
+  .actions button {
+    font: inherit;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid #25a3ec;
+    padding: 0.5rem 2rem;
+    border-radius: 25px;
+    margin-left: 1rem;
+    color: black
+  }
+
+  .actions button:hover,
+  .actions button:active {
+    background-color: #25a3ec;
+    border-color: #25a3ec;
+    color: white;
+  }
+
+  .actions .button {
+    background-color:  #25a3ec;
+    color: white;
+  }
+
+  .close{
+   display: flex;
+   flex-direction: row-reverse;
+   margin: 10px;
+   margin-bottom: 15px;
+  }
+  
