@@ -49,7 +49,8 @@ export const productsArr = [
 const AvailableProducts = () => {
     const products = productsArr.map((product) => (
         <Products
-            key={Math.random()}
+            key={product.id}
+            id={product.id}
             title={product.title}
             imageUrl={product.imageUrl}
             price={product.price}
