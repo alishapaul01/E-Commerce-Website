@@ -1,14 +1,15 @@
 
-import { Container, Navbar } from "react-bootstrap";
+import { Container, Navbar , Nav} from "react-bootstrap";
 import classes from './Header.module.css';
-import Nav from 'react-bootstrap/Nav';
-import HeaderCartButton from './HeaderCartButton'
+import HeaderCartButton from './HeaderCartButton';
+import { NavLink } from "react-router-dom";
 
 const Header = (props) => {
     
 
     return (
         <>
+        <header>
             <Navbar bg="dark" expand="sm" variant="dark">
                 <Container>
                 <ul className={classes.header}>
@@ -16,16 +17,24 @@ const Header = (props) => {
                         <Nav.Link>HOME</Nav.Link>
                     </li>
                     <li className={classes.li}>
-                        <Nav.Link>STORE</Nav.Link>
+                        <NavLink to='/store' className={({isActive})=> isActive? classes.active : undefined} end>STORE</NavLink>
                     </li>
                     <li className={classes.li}>
-                        <Nav.Link>ABOUT</Nav.Link>
+                        <NavLink to='/about' className={({isActive})=> isActive? classes.active : undefined}>ABOUT</NavLink>
                     </li>
                 </ul>
                 <HeaderCartButton onClick={props.onShowCart} />
                 </Container>
             </Navbar>
-            <h1>The Generics</h1>
+            <h1 
+            style={{
+                backgroundColor: 'grey', 
+                fontSize:'100px', 
+                color:'white', 
+                textAlign:'center',
+                fontFamily: 'times new roman'
+                }}>The Generics</h1>
+            </header>
         </>
     )
 }

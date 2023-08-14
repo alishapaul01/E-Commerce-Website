@@ -38,19 +38,6 @@
    
   }
   
-   h1 {
-      background-color: rgb(99, 97, 97);
-      color:white;
-      font-family: 'Times New Roman';
-      font-size: 90px;
-      height: 10rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      align-content: center;
-  
-   }
-  
   .li a {
     color: white;
   }
