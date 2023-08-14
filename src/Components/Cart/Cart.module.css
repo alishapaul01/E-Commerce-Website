@@ -13,7 +13,29 @@
   border-bottom: 1px solid rgb(73, 184, 235);
   margin:3px;
 }
+.images img{
+  display: flex;
+  margin: 1rem;
+  border: 1px solid plum;
+  text-align: center;
+    width: 80px;
+    height: fit-content;
+    overflow: hidden;
 
+
+}
+.quantity{
+  font-weight: bolder;
+  margin: 0.5rem;
+}
+.price{
+  font-weight: bold;
+  margin: 0.5rem;
+}
+.title{
+  font-weight: bold;
+  margin: 0.5rem;
+}
 .total {
   display: flex;
   justify-content: space-between;
@@ -57,6 +79,5 @@
 .close{
  display: flex;
  flex-direction: row-reverse;
- margin: 10px;
- margin-bottom: 15px;
+ margin-bottom: 5px;
 }

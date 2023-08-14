@@ -1,4 +1,4 @@
-import AvailableProducts from "../Components/Products/AvailableProducts";
+import AvailableProducts from "../../Components/Products/AvailableProducts";
 
 const StorePage=()=>{
 return <AvailableProducts/>

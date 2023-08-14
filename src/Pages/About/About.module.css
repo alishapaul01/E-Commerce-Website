@@ -1,0 +1,16 @@
+.about {
+    margin: 30px 100px 30px 100px;
+    padding: 30px;
+    display: flex;
+    font-family: "Courier New", Courier, monospace;
+    justify-content:center;
+    text-align: justify;
+    border: 3px solid plum;
+  }
+  
+  
+  
+  h2 {
+      margin-top: 2rem;
+      padding: 1px;
+  }

@@ -10,13 +10,16 @@ const Cart = (props) => {
         const cartItems = (
             <ul>{cxt.items.map((item) => (
                     <li id={item.id} className={classes.content} >
-                        <div classname={classes.title}>{item.title}</div>
-                        <div className={classes.images}>{item.imageUrl}</div>
+                        
+                        <div className={classes.images}>
+                            
+                            {item.imageUrl}</div>
+                        <div className={classes.title}>{item.title}</div>
                         <div className={classes.price}>Rs {item.price}</div>
                         <div className={classes.quantity}>{item.quantity} </div>
                         <Button
                             variant='danger' size='sm'
-                            style={{ marginBottom: '3px' }}
+                            style={{ margin: '1.5rem auto' , fontWeight:'bold' }}
                             onClick={() => cxt.removeItem(item)}>Remove</Button>
                     </li>
                 ))}
@@ -31,7 +34,7 @@ const Cart = (props) => {
            {cartItems}
             <div className={classes.total}>
 				<span>Total Amount</span>
-                <span>{cxt.totalAmount}</span>
+                <span> Rs {cxt.totalAmount}</span>
 			</div>
 			<div className={classes.actions}>
 				<Button>Purchase</Button>

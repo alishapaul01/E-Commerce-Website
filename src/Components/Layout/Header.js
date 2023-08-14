@@ -1,5 +1,5 @@
 
-import { Container, Navbar , Nav} from "react-bootstrap";
+import { Container, Navbar} from "react-bootstrap";
 import classes from './Header.module.css';
 import HeaderCartButton from './HeaderCartButton';
 import { NavLink } from "react-router-dom";
@@ -14,7 +14,7 @@ const Header = (props) => {
                 <Container>
                 <ul className={classes.header}>
                     <li className={classes.li}>
-                        <Nav.Link>HOME</Nav.Link>
+                        <NavLink to='/home' className={({isActive})=> isActive? classes.active : undefined}>HOME</NavLink>
                     </li>
                     <li className={classes.li}>
                         <NavLink to='/store' className={({isActive})=> isActive? classes.active : undefined} end>STORE</NavLink>
