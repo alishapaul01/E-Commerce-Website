@@ -3,6 +3,7 @@ import React ,{useContext}from 'react';
 import { Button } from 'react-bootstrap';
 import classes from './AvailableProduct.module.css';
 import CartContext from '../../Store/cart-context';
+import {Link} from 'react-router-dom'
 
 
 const Products = (props) => {
@@ -20,7 +21,7 @@ const Products = (props) => {
 
                 <h2>{props.title}</h2>
                 <div className={classes['main-image']}>
-                {props.imageUrl}
+                <Link to={`/store/${props.id}`}>{props.imageUrl}</Link>
                 </div>
                 <p><b>Rs {props.price}</b></p>
                 <Button onClick={addItemToCart}>Add To Cart</Button>

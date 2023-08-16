@@ -11,6 +11,8 @@ export const productsArr = [
     price: 100,
     
     imageUrl: <img src='https://prasadyash2411.github.io/ecom-website/img/Album%201.png'alt='album 1'></img>,
+
+    description: 'A multicolor picture album which suits your style.'
     
     },
     
@@ -21,6 +23,8 @@ export const productsArr = [
     price: 50,
     
     imageUrl: <img src='https://prasadyash2411.github.io/ecom-website/img/Album%202.png' alt='album2'></img>,
+
+    description: 'A Black and white monochrome picture.'
     
     },
     
@@ -31,6 +35,9 @@ export const productsArr = [
     price: 70,
     
     imageUrl: <img src='https://prasadyash2411.github.io/ecom-website/img/Album%203.png' alt='album 3'></img>,
+
+    description: 'Yellow lights to lighten up your day.'
+    
     
     },
     
@@ -42,6 +49,8 @@ export const productsArr = [
     price: 100,
     
     imageUrl: <img src='https://prasadyash2411.github.io/ecom-website/img/Album%204.png' alt='album 4'></img>,
+    
+    description: 'Blue Hues and Mist.'
     
     }
     
