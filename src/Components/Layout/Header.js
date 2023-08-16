@@ -22,6 +22,9 @@ const Header = (props) => {
                     <li className={classes.li}>
                         <NavLink to='/about' className={({isActive})=> isActive? classes.active : undefined}>ABOUT</NavLink>
                     </li>
+                    <li className={classes.li}>
+                        <NavLink to='/contact' className={({isActive})=> isActive? classes.active : undefined}>CONTACT US</NavLink>
+                    </li>
                 </ul>
                 <HeaderCartButton onClick={props.onShowCart} />
                 </Container>
