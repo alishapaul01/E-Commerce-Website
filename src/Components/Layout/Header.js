@@ -17,13 +17,16 @@ const Header = (props) => {
                         <NavLink to='/home' className={({isActive})=> isActive? classes.active : undefined}>HOME</NavLink>
                     </li>
                     <li className={classes.li}>
-                        <NavLink to='/store' className={({isActive})=> isActive? classes.active : undefined} end>STORE</NavLink>
+                        <NavLink to='/store' className={({isActive})=> isActive? classes.active : undefined} end='true'>STORE</NavLink>
                     </li>
                     <li className={classes.li}>
                         <NavLink to='/about' className={({isActive})=> isActive? classes.active : undefined}>ABOUT</NavLink>
                     </li>
                     <li className={classes.li}>
                         <NavLink to='/contact' className={({isActive})=> isActive? classes.active : undefined}>CONTACT US</NavLink>
+                    </li>
+                    <li className={classes.li}>
+                        <NavLink to='/auth' className={({isActive})=> isActive? classes.active : undefined}>LOGIN</NavLink>
                     </li>
                 </ul>
                 <HeaderCartButton onClick={props.onShowCart} />

@@ -1,0 +1,67 @@
+.login-card {
+    margin: 3rem auto;
+    width: 90%;
+    max-width: 30rem;
+    text-align: center;
+    background-color: ghostwhite;
+    padding: 2rem 2rem 2rem 2rem;
+    border: 12px solid black;
+    border-radius: 20px;;
+  }
+
+.login-card h3{
+    color: black;
+    margin: 0px 0px 0.5rem 0px;
+  }
+.login-card p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+    margin: 2rem;
+  }
+.login-email {
+    text-align: left;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+
+.login-email input {
+    width: 100%;
+    margin: 5px 0px 10px 0px;
+    height: 2rem;
+    border-radius: 4px;
+    border-color:black;
+}
+.login-email input:hover{
+    border-color:darkmagenta;
+    border-radius: 4px;
+}
+.login-password {
+    text-align: left;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+
+.login-password input {
+    width: 100%;
+    margin: 5px 0px 10px 0px;
+    height: 2rem;
+    border-radius: 4px;
+    border-color: black;
+}
+.login-password input:hover{
+    border-color:darkmagenta;
+    border-radius: 4px;
+}
+.login-card button{
+    background-color:pink;
+    font-size: bold;
+    border-radius: 2px;
+    font-weight: bolder;
+    color: black;
+} 
+
+.login-card button:hover{
+    color:black;
+    border-color: hotpink;
+    background-color: white ;
+}
