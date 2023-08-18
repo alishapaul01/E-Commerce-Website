@@ -2,11 +2,8 @@ import React from 'react';
 
 const CartContext = React.createContext({
     items: [],
-    totalAmount: 0,
-    token: '',
-    isLoggedIn: false,
-    login: (token)=>{},
-    logout: ()=>{}
+    totalAmount: 0
+
 })
 
 export default CartContext;
