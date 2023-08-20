@@ -1,7 +1,7 @@
 import { useState, useRef, useContext} from 'react';
 import {useHistory} from 'react-router-dom';
 import classes from './Login.module.css'
-import AuthContext from '../../Store/auth-context';
+import CartContext from '../../Store/cart-context';
 
 const Login = () => {
   const history=useHistory();
@@ -9,7 +9,7 @@ const Login = () => {
   const passwordInputRef= useRef('');
   const [isLogin, setIsLogin] = useState(true);
 
-  const authCtx= useContext(AuthContext);
+  const authCtx= useContext(CartContext);
   const switchAuthModeHandler = () => {
     setIsLogin((prevState) => !prevState);
   };
@@ -17,7 +17,6 @@ const Login = () => {
     event.preventDefault();
     const enteredEmail = emailInputRef.current.value;
     const enteredPassword = passwordInputRef.current.value;
-
     let url;
 
     if(isLogin){
@@ -49,7 +48,7 @@ const Login = () => {
   })
       .then((data) => {
           
-          authCtx.login(data.idToken);
+          authCtx.login(data.idToken, enteredEmail);
           history.replace('/store');
       })
       .catch((err) => {

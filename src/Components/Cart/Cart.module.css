@@ -5,6 +5,22 @@
   max-height: 20rem;
   overflow: auto;
 }
+.heading1{
+  padding: 0.5rem;
+  margin: 50px;
+  border-bottom: 3px solid deeppink;
+}
+.heading2{
+  padding: 0.5rem;
+  margin: 7px auto;
+  border-bottom: 3px solid deeppink;
+
+}
+.heading3{
+  padding: 0.5rem;
+  margin: 60px;
+  border-bottom: 3px solid deeppink;
+}
 
 .content {
   display: flex;
@@ -18,23 +34,30 @@
   margin: 1rem;
   border: 1px solid plum;
   text-align: center;
-    width: 80px;
-    height: fit-content;
-    overflow: hidden;
-
-
+  width: 80px;
+  height: fit-content;
+  overflow: hidden;
 }
 .quantity{
-  font-weight: bolder;
-  margin: 0.5rem;
+  font-weight: bold;
+  margin: 1rem;
+  padding: 1rem;
+  border: 2px solid plum;
+  border-radius: 10px;
 }
 .price{
   font-weight: bold;
-  margin: 0.5rem;
+  margin: 1rem;
+  padding: 1rem;
+  border: 2px solid;
+  border-radius: 10px;
 }
+
 .title{
   font-weight: bold;
-  margin: 0.5rem;
+  margin: 1rem;
+  padding: 1rem;
+  border: 2px solid plum;
 }
 .total {
   display: flex;

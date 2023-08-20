@@ -7,15 +7,15 @@ import reportWebVitals from './reportWebVitals';
 import '../node_modules/react-bootstrap/dist/react-bootstrap.min.js'
 import '../node_modules/bootstrap/dist/css/bootstrap.css';
 import { BrowserRouter} from 'react-router-dom';
-import {AuthContextProvider} from './Store/auth-context';
+import CartProvider from './Store/CartProvider';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-     <AuthContextProvider> 
+     <CartProvider> 
     <BrowserRouter>
     <App />
     </BrowserRouter>
-    </AuthContextProvider> 
+    </CartProvider> 
   </React.StrictMode>
 );
 

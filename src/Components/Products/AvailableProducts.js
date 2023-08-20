@@ -1,5 +1,10 @@
 import classes from './AvailableProduct.module.css'
-import Products from './Product'
+import Products from './Product';
+import album1 from'../../Assets/Album 1.png';
+import album2 from'../../Assets/Album 2.png';
+import album3 from'../../Assets/Album 3.png';
+import album4 from'../../Assets/Album 4.png';
+
 
 export const productsArr = [
 
@@ -10,7 +15,7 @@ export const productsArr = [
     
     price: 100,
     
-    imageUrl: <img src='https://prasadyash2411.github.io/ecom-website/img/Album%201.png'alt='album 1'></img>,
+    imageUrl: <img src={album1} alt="Product 1" />,
 
     description: 'A multicolor picture album which suits your style.'
     
@@ -22,8 +27,7 @@ export const productsArr = [
     
     price: 50,
     
-    imageUrl: <img src='https://prasadyash2411.github.io/ecom-website/img/Album%202.png' alt='album2'></img>,
-
+    imageUrl: <img src={album2} alt="Product 2" />,
     description: 'A Black and white monochrome picture.'
     
     },
@@ -34,8 +38,7 @@ export const productsArr = [
     
     price: 70,
     
-    imageUrl: <img src='https://prasadyash2411.github.io/ecom-website/img/Album%203.png' alt='album 3'></img>,
-
+    imageUrl: <img src={album3} alt="Product 3" />,
     description: 'Yellow lights to lighten up your day.'
     
     
@@ -48,7 +51,7 @@ export const productsArr = [
     
     price: 100,
     
-    imageUrl: <img src='https://prasadyash2411.github.io/ecom-website/img/Album%204.png' alt='album 4'></img>,
+    imageUrl: <img src={album4} alt="Product 4" />,
     
     description: 'Blue Hues and Mist.'
     
@@ -58,12 +61,12 @@ export const productsArr = [
 const AvailableProducts = () => {
     const products = productsArr.map((product) => (
         <Products
-            key={product.id}
+            key={Math.random()}
             id={product.id}
             title={product.title}
             imageUrl={product.imageUrl}
             price={product.price}
-            
+            items={product}
         />
     ))
     return (
