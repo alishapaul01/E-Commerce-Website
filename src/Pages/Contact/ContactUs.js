@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import classes from './ContactUs.module.css';
+import { Button } from 'react-bootstrap';
 
 const ContactUs = () => {
     const [enteredName, setEnteredName]= useState('');
@@ -55,7 +56,7 @@ const ContactUs = () => {
                     <label htmlFor='number'>Phone number</label><br />
                     <input type='telephone' id='number'  value={enteredNumber} onChange={numberChangeHandler} />
                 </div>
-                <button type='submit'>Sumbit</button>
+                <Button type='submit'>Submit</Button>
             </form>
         </section>
     )

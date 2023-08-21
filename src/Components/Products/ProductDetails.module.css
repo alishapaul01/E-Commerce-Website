@@ -13,15 +13,11 @@
     font-weight:bolder ;
     padding: 1rem;
     font-size: 40px;
-}
-
-.product-image{
-    margin-left: 11rem;
+    margin: 10px auto;
 }
 
 .product-details p{
-    margin-left:720px;
-    margin-top: 1rem;
+    margin: 10px auto;
     font-size: 30px;
  }
 
@@ -29,13 +25,12 @@
     width: fit-content;
     height: fit-content;
     overflow: hidden;
-    background-color: aqua;
-    margin-left: 620px;
+    margin: 10px auto ;
 
   }
 
   .product-image img {
-    object-fit: cover;
+    object-fit:cover;
     transition: 1s;
   }
 
@@ -44,7 +39,7 @@
   }
   .product-details h5{
     text-align: center;
-    margin: 2rem auto;
+    margin: 10px auto;
     padding: 1rem;
-    border: 1px solid plum;
+    border: 2px solid plum;
   }

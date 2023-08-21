@@ -1,48 +1,37 @@
 .navbar{
-    width: 100%;
-    position: fixed;
-    display: flex;
-    justify-content: center;
-   
-  }
+  width: 100%;
+  display: flex;
+  position:fixed;
+}
+
+.ul { 
  
-  .header { 
-   margin-left: 30%;
-   display: flex;
-   justify-content: center;
-   align-content: center;
-   align-items: center;
-   color: white;
-   gap: 40px;
- }
+ display: flex;
+ justify-content: center;
+ align-content: center;
+ align-items: center;
+ color: white;
+ gap: 40px; 
+ margin: 10px auto;
+}
  
  .li {
    list-style-type: none;
-   margin: 5px;
-   padding: 1px;
+   margin: 15px auto;
+   padding: 3px;
    color: white;
    display: flex;
-   justify-content: center;
-   align-items: center;
+   font-size: 25px;
+   font-family: Georgia, 'Times New Roman', Times, serif;
    text-align: center;
-   font-size: large;
-   font-weight: 500;
+   font-weight: bold;
  }
- .cart-button {
-    margin-left: 200px;
-    margin-right: 2px;
-    border-color: aqua;
-    background-color: black;
-    border-radius: 24px;
-    width: 100px;
-   
-  }
-  
+
   .li a {
     color: white;
   }
   
   .li a:hover,
   .li a.active {
-     color: rgb(255, 251, 0)
+     color:palevioletred;
   }

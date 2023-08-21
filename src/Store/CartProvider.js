@@ -12,28 +12,31 @@ const CartProvider = (props) => {
     const userIsLoggedIn = !!token;
 
     const modifiedEMail=  email.replace('@','').replace('.', '');
+
+    
     const addItemToCartHandler= async (item) => {
       let itemsCopy = [...items];
       let itemIndex = itemsCopy.findIndex((i) => i.id === item.id);
-     
+
       if (itemIndex === -1) {
-        await axios.post(`https://crudcrud.com/api/f4e20b5632324aaf82c891c6235a3134/Cart${modifiedEMail}`, item)
+        await axios.post(`https://crudcrud.com/api/06c9da1d7d26446bba8d9f17a528b870/Cart${modifiedEMail}`, item)
         console.log(item)
        // updateItems([...items,item]);
       } 
       else {
-  
+
         const existingCartItem = items[itemIndex];
             const id = items[itemIndex]._id;
             const updatedCartItem = { ...item, quantity: existingCartItem.quantity + 1 };
-           await axios.put(`https://crudcrud.com/api/f4e20b5632324aaf82c891c6235a3134/Cart${modifiedEMail}/${id}`, updatedCartItem)
-  
+           await axios.put(`https://crudcrud.com/api/06c9da1d7d26446bba8d9f17a528b870/Cart${modifiedEMail}/${id}`, updatedCartItem)
+
           console.log('inside addItemToCartHandler',cartContext);
       }
-      const response = await axios.get(`https://crudcrud.com/api/f4e20b5632324aaf82c891c6235a3134/Cart${modifiedEMail}`)
+      const response = await axios.get(`https://crudcrud.com/api/06c9da1d7d26446bba8d9f17a528b870/Cart${modifiedEMail}`)
       const data= await response.data;
       updateItems(data)
     }
+
     useEffect(() => {
       const email = localStorage.getItem('email');
       const token = localStorage.getItem('token');
@@ -41,27 +44,38 @@ const CartProvider = (props) => {
           setToken(token);
           setEmail(email);
           axios.get(
-              `https://crudcrud.com/api/f4e20b5632324aaf82c891c6235a3134/Cart${modifiedEMail}`
+              `https://crudcrud.com/api/06c9da1d7d26446bba8d9f17a528b870/Cart${modifiedEMail}`
           ).then((res) => {
               updateItems(res.data);
           })
       }
   }, [modifiedEMail, token])
-     
+
     const removeItemFromCartHandler = async (item) => {
-      const itemIndex = items.findIndex((i) => i.id === item.id);
-      if (itemIndex !== -1){
-        const id = items[itemIndex]._id;
-         await axios.delete(
-          `https://crudcrud.com/api/f4e20b5632324aaf82c891c6235a3134/Cart${modifiedEMail}/${id}`
-          )
-         }
-      const response =await axios.get(
-          `https://crudcrud.com/api/f4e20b5632324aaf82c891c6235a3134/Cart${modifiedEMail}`
-      )
-      const data = response.data;
-      updateItems(data);
+  //     const itemIndex = items.findIndex((i) => i.id === item.id);
+  //     if (itemIndex !== -1){
+  //       const id = items[itemIndex]._id;
+  //        await axios.delete(
+  //         `https://crudcrud.com/api/06c9da1d7d26446bba8d9f17a528b870/Cart${modifiedEMail}/${id}`
+  //         )
+  //        }
+  //     const response =await axios.get(
+  //         `https://crudcrud.com/api/06c9da1d7d26446bba8d9f17a528b870/Cart${modifiedEMail}`
+  //     )
+  //     const data = response.data;
+  //     updateItems(data);
+  // }
+  const itemsCopy = [...items];
+  const idx = itemsCopy.findIndex((i) => i.id === item.id);
+
+  if (idx !== -1 && itemsCopy[idx].quantity < 2 ) {
+    itemsCopy.splice(idx, 1);
+    updateItems(itemsCopy);
+  } else {
+    itemsCopy[idx].quantity--;
+    updateItems(itemsCopy); 
   }
+}; 
     let totalPrice = 0;
     items.forEach((item) => {
         totalPrice = totalPrice + Number(item.price * item.quantity);
